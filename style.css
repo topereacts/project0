@@ -1,0 +1,32 @@
+.search {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 190px;
+}
+
+#search {
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-top: 30px;
+}
+
+#button {
+    cursor: pointer;
+}
+
+
+.pages {
+    text-align: right;
+}
+
+.advSearch {
+    margin-top: 50px;
+}
+
+label {
+    margin-top: 20px;
+}
