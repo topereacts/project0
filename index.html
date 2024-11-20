@@ -9,9 +9,25 @@
             <a href="isearch.html">Image Search</a>
             <a href="asearch.html">Advanced Search</a>
         </div>
-        <form class="search" action="https://google.com/search">
-            <input id="search" type="text" name="q"><br>
-            <input id="button" type="submit" value="Google Search" >
-        </form>
+        <form class="searchForm" action="https://google.com/search">
+            <input id="search" type="text" name="q" size="90"><br>
+            <input id="button" type="submit" value="Google Search">
+            <button id="luckyButton">I'm Feeling Lucky</button>
+        </form>     
     </body>
+    <script>
+        document.getElementById('luckyButton').addEventListener('click', function() {
+            let query = "I'm Feeling Lucky"; // Replace with your actual search query
+            let apiKey = "AIzaSyB2jyHruRYpn4XG5b5KOvk0JMKTEVEOPHs"; // Replace with your API key
+            let cx = "6410a590f8c1e43a9"; // Replace with your Custom Search Engine ID
+
+            // Make an HTTP request to the Google Custom Search API
+            fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`)
+                .then(response => response.json())
+                .then(data => {
+                    let firstResultUrl = data.items[0].link; // Extract the URL of the first result
+                    window.location.href = firstResultUrl; // Redirect to the first result
+                });
+        });
+    </script>
 </html>
