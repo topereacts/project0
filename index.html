@@ -18,8 +18,8 @@
     <script>
         document.getElementById('luckyButton').addEventListener('click', function() {
             let query = "I'm Feeling Lucky"; // Replace with your actual search query
-            let apiKey = "AIzaSyB2jyHruRYpn4XG5b5KOvk0JMKTEVEOPHs"; // Replace with your API key
-            let cx = "6410a590f8c1e43a9"; // Replace with your Custom Search Engine ID
+            let apiKey = "your_api_key"; // Replace with your API key
+            let cx = "your_cx"; // Replace with your Custom Search Engine ID
 
             // Make an HTTP request to the Google Custom Search API
             fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}`)
